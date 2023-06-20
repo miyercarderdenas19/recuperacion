@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Recuperar contraseña</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="login-box">
+    <div class="alinear_Flex">
+      <img src="img/logo3.png" alt="logoproyecto">
+    </div>
+    <section class="form-login">
+      <h5>Recuperar contraseña</h5>
+      <form id="loginForm">
+        <input class="controls" type="email" name="correo" placeholder="Correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+        <input class="buttons" type="submit" value="Recuperar">
+      </form>
+      <p><a href="#">¿Ya estás registrado?</a></p>
+    </section>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Evita que se realice la acción por defecto del formulario
+
+      // Aquí puedes ejecutar tu lógica de validación o realizar una petición al servidor
+
+      // Ejemplo: obtener el valor del campo de correo electrónico
+      var correo = document.getElementsByName("correo")[0].value;
+
+      // Ejemplo: mostrar un mensaje con el correo ingresado
+      alert("Se ingresó el correo: " + correo);
+      
+      // Aquí puedes agregar más código para manejar la recuperación de contraseña
+    });
+  </script>
+</body>
+</html>
+ 
